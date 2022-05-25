@@ -19,20 +19,14 @@ class Puzzle:
         Args:
             self (Puzzle): An instance of Puzzle.
         """
-        self._secret_words = []
+        self._secret_words = ["cat","dog", "man"]
 
-    def create_words(self):
-        """To create the words that will be used in the puzzle"""
-
-        for i in range(5):
-            self._secret_words.append(i)
-
-
-    def random_select(self):
+    
+    def get_word(self):
         """To randomly select a new word"""
 
-        i = random.choice(self._secret_words)
-        return i
+        word = random.choice(self._secret_words)
+        return word
 
 
 

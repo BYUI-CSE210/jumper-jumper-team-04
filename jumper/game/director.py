@@ -26,9 +26,11 @@ class Director:
             self (Director): an instance of Director.
         """
         self._is_playing = True
-        self._puzzle = Puzzle().get_word()
-        self._man = Man(self._puzzle)
+        self._puzzle = Puzzle()
+        self._secret_word = self._puzzle.get_word()
+        self._man = Man(self._secret_word)
         self._terminal_service = TerminalService()
+
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -82,7 +84,7 @@ class Director:
          
         else:
             
-            if self._puzzle == self._man._winning_word:
+            if self._secret_word == self._man._winning_word:
                 print('Congratulations YOU WIN!!!')
                 self._is_playing = False
                 return self._is_playing
