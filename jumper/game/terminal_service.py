@@ -1,3 +1,5 @@
+import re
+
 class TerminalService:
     """A service that handles terminal operations.
     
@@ -29,11 +31,32 @@ class TerminalService:
         """
         return float(input(prompt))
         
-    def write_text(self, text):
+    def write_text(self, text, end = "\n"):
         """Displays the given text on the terminal. 
-
         Args: 
             self (TerminalService): An instance of TerminalService.
-            text (string): The text to display.
+            text (str): The text to display.
+            end (str): Specify what to print at the end.
         """
-        print(text)
+        print(text, end= end)
+
+
+    def validateInput(self, message, expected_range):
+        """Validate if the user input is an expected input
+        Args: 
+        self (Director): An instance of Director.
+        message (str): message to ask to the user
+        expected_range (str): regular expression corresponding to possible right options
+        
+        """
+        user_input = input(message)
+        repeat = True
+        while repeat == True:
+            if re.match(expected_range, user_input) != None:   
+                guess = user_input
+                repeat = False
+            else:
+                print("Bad input. Try again")
+                user_input = input(message)
+                repeat = True  
+        return guess   
