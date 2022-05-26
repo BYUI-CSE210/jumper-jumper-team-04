@@ -17,29 +17,48 @@ class Man:
 
     def parachute(self):
         if self.fails < 1:
-            victim =  """ 
+            victim = """ 
             FINE
              ___
             /___\ 
+           /     \ 
+           \     /
             \   /
              \ /
               o
              /|\ 
              / \ 
          ^^^^^^^^^^"""
+
         elif self.fails < 2:
-            victim =  """ 
+            victim = """ 
             WE HAVE A SMALL PROBLEM...
              
             /___\ 
+           /     \  
+           \     /    
             \   /
              \ /
               o
              /|\ 
              / \ 
          ^^^^^^^^^^"""
+
         elif self.fails < 3:
-            victim =  """ 
+            victim = """ 
+            WE HAVE MORE PROBLEM...
+             
+           /     \ 
+           \     /    
+            \   /
+             \ /
+              o
+             /|\ 
+             / \ 
+         ^^^^^^^^^^"""
+
+        elif self.fails < 4:
+            victim = """ 
              UH OH...
              
             \   /
@@ -49,7 +68,7 @@ class Man:
              / \ 
          ^^^^^^^^^^"""
 
-        elif self.fails < 4:       
+        elif self.fails < 5:       
             victim =  """ 
              DANGER!!!
              
@@ -86,7 +105,7 @@ class Man:
             self.fails += 1  
 
     def is_alive(self):
-        return False if self.fails > 3 else True
+        return False if self.fails > 4 else True
 
     def is_winner(self):
         return "_" not in self._blank_puzzle
