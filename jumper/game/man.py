@@ -70,7 +70,7 @@ class Man:
 
         elif self.fails < 5:       
             victim =  """ 
-             DANGER!!!
+             YOU ARE IN DANGER!!!
              
           
              \ /
@@ -95,8 +95,7 @@ class Man:
         self._is_in_puzzle = False
         for i in range(len(self._word)):
             if letter == self._word[i]:
-                self._blank_puzzle[i] = letter
-                
+                self._blank_puzzle[i] = letter               
                 self._winning_word += letter
                 #print('this is winning word so far',self._winning_word) # debugging
                 

@@ -19,7 +19,7 @@ class Puzzle:
         Args:
             self (Puzzle): An instance of Puzzle.
         """
-        self._secret_words = ["cat","dog", "man"]
+        self._secret_words = ["cat","dog","man"]
 
     
     def get_word(self):

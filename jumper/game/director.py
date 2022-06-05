@@ -44,7 +44,7 @@ class Director:
             self._do_outputs()
 
     def _get_inputs(self):
-        """Update this comment
+        """The game starts by guessing a letter
 
         Args:
             self (Director): An instance of Director.
@@ -61,7 +61,7 @@ class Director:
         self._terminal_service.write_text(f"your input: {self._user_letter}") #displays the user's letter
 
     def _do_updates(self):
-        """Update this comment
+        """It updates the letter guess against the letter that should be guess
         
         Args:
             self (Director): An instance of Director.
@@ -69,27 +69,27 @@ class Director:
         self._man.check_guess(self._user_letter)
 
     def _do_outputs(self):
-        """Update this comment
+        """Every wrong guess, the parachute is beginning to fall
 
         Args:
             self (Director): An instance of Director.
         """
         print(self._man.parachute())
         continuing = self._man.fails #checks the fail count
-        print(continuing,'this isthe fail count')
+        print(continuing,'wrong guess!!')
         if continuing == 5:
              self._is_playing = False
-             print(self._is_playing,'this should say false')
+             print('Im sorry!!!')
              return self._is_playing
          
         else:
             
             if self._secret_word == self._man._winning_word:
-                print('Congratulations YOU WIN!!!')
+                print('You did it! Congratulations YOU WIN!!!')
                 self._is_playing = False
                 return self._is_playing
             else:   
                 
                 self._is_playing = True
-                print('this should be true', self._is_playing)
+                print('try it again!!!',)
                 return self._is_playing
