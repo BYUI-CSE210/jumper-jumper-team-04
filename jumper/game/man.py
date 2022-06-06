@@ -3,6 +3,13 @@ class Man:
     
     The responsibility of a Man is to provide actions to deal with the man
     in parachutes
+    Attributes:
+        _fails: holding the fail count 
+        _word: holding the word 
+        _blank_puzzle: holding the placeholder for the puzzle
+        _is_in_puzzle (boolean): wheter the word is in the puzzle
+        _winning_word: holding the winning word
+
     """
     def __init__(self, word):
         self.fails = 0      

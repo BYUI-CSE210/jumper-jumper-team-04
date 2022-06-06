@@ -15,8 +15,13 @@ class Director:
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
-        is_playing (boolean): Whether or not to keep playing.
-        terminal_service: For getting and displaying information on the terminal.
+        _is_playing (boolean): Whether or not to keep playing.
+        _puzzle: holding the puzzle
+        _secret_word: selecting the secret word
+        _man: holding the man 
+        _terminal_service: For getting and displaying information on the terminal.
+        
+
     """
 
     def __init__(self):
