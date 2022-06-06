@@ -81,7 +81,7 @@ class Director:
         """
         print(self._man.parachute())
         continuing = self._man.fails #checks the fail count
-        print(continuing,'wrong guess!!')
+        print('wrong guess!!')
         if continuing == 5:
              self._is_playing = False
              print('Im sorry!!!')
