@@ -88,9 +88,14 @@ class Director:
              return self._is_playing
          
         else:
-            for letter in self._man._winning_word:
 
-                if letter  in  self._secret_word:
+
+            
+            for letter in self._man._winning_word:
+                
+                        
+                if len(self._man._winning_word) == len(self._secret_word) and letter in self._secret_word or self._man._winning_word == self._secret_word:
+                    
                     print('You did it! Congratulations YOU WIN!!!')
                     self._is_playing = False
                     return self._is_playing
