@@ -11,7 +11,12 @@ class Man:
         _winning_word: holding the winning word
 
     """
-    def __init__(self, word):
+    def __init__(self, word):    
+        """Constructs a new Man.
+
+        Args:
+            self (Man): An instance of Man.
+        """
         self.fails = 0      
         self._word = word
         self._blank_puzzle = ["_"] * len(self._word) #creates the placeholders for the display for the letter 
@@ -104,7 +109,7 @@ class Man:
         """This method will change the "blank lines" to the correct letter when guessed"""
         self._is_in_puzzle = False
         for i in range(len(self._word)):
-            if letter == self._word[i]:
+            if letter == self._word[i] or letter == reversed(self._word[i]):
                 self._blank_puzzle[i] = letter               
                 self._winning_word += letter
                 #print('this is winning word so far',self._winning_word) # debugging
