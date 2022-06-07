@@ -88,7 +88,7 @@ class Director:
              return self._is_playing
          
         else:
-            
+
             if self._secret_word == self._man._winning_word:
                 print('You did it! Congratulations YOU WIN!!!')
                 self._is_playing = False

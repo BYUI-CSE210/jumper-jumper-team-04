@@ -109,7 +109,7 @@ class Man:
         """This method will change the "blank lines" to the correct letter when guessed"""
         self._is_in_puzzle = False
         for i in range(len(self._word)):
-            if letter == self._word[i] or letter == reversed(self._word[i]):
+            if letter == self._word[i]:
                 self._blank_puzzle[i] = letter               
                 self._winning_word += letter
                 #print('this is winning word so far',self._winning_word) # debugging
