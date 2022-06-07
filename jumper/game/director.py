@@ -90,7 +90,7 @@ class Director:
         else:
             for letter in self._man._winning_word:
 
-                if letter  ==  self._secret_word:
+                if letter  in  self._secret_word:
                     print('You did it! Congratulations YOU WIN!!!')
                     self._is_playing = False
                     return self._is_playing
